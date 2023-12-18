@@ -137,7 +137,7 @@ export default function Classify(props: ClassifyProps) {
           exclamatory?
         </h2>
 
-        <div className="flex h-32 items-center justify-center p-2">
+        <div className="flex h-24 items-center justify-center p-2">
           <h2 className="h-fit max-w-xl rounded-2xl bg-blue-700 p-2 px-4 text-center text-white">
             {sentenceCompletion}
           </h2>
@@ -180,7 +180,7 @@ export default function Classify(props: ClassifyProps) {
         </div>
       </div>
 
-      <div className="flex w-full justify-center bg-blue-200 p-4">
+      <div className="flex w-full justify-center bg-blue-200 py-4">
         <h2 className="ml-[5.5rem] h-fit w-80 rounded-t-2xl rounded-bl-2xl bg-blue-50 p-2 px-4">
           {isAnswered
             ? feedbackCompletion
