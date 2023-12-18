@@ -131,13 +131,13 @@ export default function Classify(props: ClassifyProps) {
         <h2 className="text-center text-xl italic">{props.studentTopic}</h2>
       </div>
 
-      <div className="flex h-2/3 flex-col items-center justify-center space-y-4">
+      <div className="flex h-2/3 flex-col items-center justify-center space-y-4 p-4 ">
         <h2 className="max-w-xl  text-center text-xl font-bold text-blue-700">
           Is the following sentence declarative, imperative, interrogative, or
           exclamatory?
         </h2>
 
-        <div className="flex h-24 items-center justify-center p-2">
+        <div className="flex h-24 items-center justify-center">
           <h2 className="h-fit max-w-xl rounded-2xl bg-blue-700 p-2 px-4 text-center text-white">
             {sentenceCompletion}
           </h2>
@@ -180,7 +180,7 @@ export default function Classify(props: ClassifyProps) {
         </div>
       </div>
 
-      <div className="flex w-full justify-center bg-blue-200 py-4">
+      <div className="flex justify-center bg-blue-200 py-4">
         <h2 className="ml-[5.5rem] h-fit w-80 rounded-t-2xl rounded-bl-2xl bg-blue-50 p-2 px-4">
           {isAnswered
             ? feedbackCompletion
