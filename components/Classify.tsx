@@ -84,13 +84,16 @@ export default function Classify(props: ClassifyProps) {
   }th grade level sentence that must be of sentence type ${currentSentenceClass.toLowerCase()} and include niche details about ${
     props.studentTopic
   }.`;
-  const { complete: sentenceComplete, completion: sentenceCompletion } =
-    useCompletion({
-      api: "/api/getCompletion",
-      onFinish(prompt) {
-        console.log(prompt);
-      },
-    });
+  const {
+    complete: sentenceComplete,
+    completion: sentenceCompletion,
+    isLoading: sentenceIsLoading,
+  } = useCompletion({
+    api: "/api/getCompletion",
+    onFinish(prompt) {
+      console.log(prompt);
+    },
+  });
 
   const feedbackPrompt = `A ${
     props.studentGrade
@@ -156,7 +159,7 @@ export default function Classify(props: ClassifyProps) {
                     ? "bg-red-500"
                     : ""
                 }`}
-                disabled={isAnswered}
+                disabled={isAnswered || sentenceIsLoading}
                 onClick={() => answer(sentenceClass)}
                 key={i}
               >
