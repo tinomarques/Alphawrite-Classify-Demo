@@ -63,7 +63,7 @@ export default function Classify(props: ClassifyProps) {
         audioPlayer.current.play();
       }
 
-      setStarCount(starCount + 1);
+      setStarCount((currentValue) => currentValue + 1);
     } else {
       if (audioPlayer.current) {
         audioPlayer.current.src = sounds[0];
